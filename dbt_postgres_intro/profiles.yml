@@ -1,0 +1,18 @@
+config:
+  send_anonymous_usage_stats: False
+  use_colors: True
+  partial_parse: True
+
+
+dbt_postgres_intro:
+  outputs:
+    dev:
+      type: postgres
+      threads: 3
+      host: localhost
+      port: 5432
+      user: markporoshin
+      pass: <pasword>
+      dbname: "dbt_intro_db"
+      schema: public
+  target: dev
